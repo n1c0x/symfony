@@ -736,7 +736,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_1e7f6cf4c17c33dfba277e2d2248f26a5222e7be41137e81090eb7017c0a708e');
+        $instance->setNamespace('sf2orm_default_4006a49dd630da44eb3c6032dcdb227da369d391a2f91ed3984a66c1e62b047c');
 
         return $instance;
     }
@@ -753,7 +753,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_1e7f6cf4c17c33dfba277e2d2248f26a5222e7be41137e81090eb7017c0a708e');
+        $instance->setNamespace('sf2orm_default_4006a49dd630da44eb3c6032dcdb227da369d391a2f91ed3984a66c1e62b047c');
 
         return $instance;
     }
@@ -770,7 +770,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_1e7f6cf4c17c33dfba277e2d2248f26a5222e7be41137e81090eb7017c0a708e');
+        $instance->setNamespace('sf2orm_default_4006a49dd630da44eb3c6032dcdb227da369d391a2f91ed3984a66c1e62b047c');
 
         return $instance;
     }
@@ -3755,7 +3755,6 @@ class appDevDebugProjectContainer extends Container
             'mailer_password' => NULL,
             'locale' => 'en',
             'secret' => '55a6c2a4a638f26ca902df7cca5294f58ddb556a',
-            'database_path' => NULL,
             'controller_resolver.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver',
             'controller_name_converter.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerNameParser',
             'response_listener.class' => 'Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener',
