@@ -1,0 +1,3 @@
+got_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: gotBundle:Default:index }
