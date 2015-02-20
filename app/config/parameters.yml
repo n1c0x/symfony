@@ -1,0 +1,1 @@
+{ parameters: { database_driver: pdo_mysql, database_host: 127.0.0.1, database_port: null, database_name: symfony, database_user: fox, database_password: fox, mailer_transport: smtp, mailer_host: 127.0.0.1, mailer_user: null, mailer_password: null, locale: en, secret: 55a6c2a4a638f26ca902df7cca5294f58ddb556a, database_path: null } }
