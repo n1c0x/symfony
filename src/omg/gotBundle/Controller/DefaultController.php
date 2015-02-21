@@ -2,7 +2,7 @@
 
 namespace omg\gotBundle\Controller;
 
-use Symfony
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
