@@ -1,7 +1,11 @@
-omggot_homepage:
-    path:     /hello/
-    defaults: { _controller: omggotBundle:Default:index }
+got_accueil:
+    path:     /accueil
+    defaults: { _controller: omggotBundle:Got:accueil }
 
-#omggot_afficher:
-#    path:     /afficher
-#    defaults: { _controller: omggotBundle:got:afficher }
+got_ajouter:
+    path:     /ajouter
+    defaults: { _controller: omggotBundle:Got:ajouter }
+
+got_rechercher:
+    path:     /rechercher
+    defaults: { _controller: omggotBundle:Got:rechercher }
