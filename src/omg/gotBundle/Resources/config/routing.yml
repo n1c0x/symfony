@@ -1,0 +1,7 @@
+omggot_homepage:
+    path:     /hello/
+    defaults: { _controller: omggotBundle:Default:index }
+
+#omggot_afficher:
+#    path:     /afficher
+#    defaults: { _controller: omggotBundle:got:afficher }
