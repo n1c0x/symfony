@@ -10,14 +10,10 @@ class DefaultController extends Controller
     {
         return $this->render('omggotBundle:Default:index.html.twig', array('name' => $name));
     }
-		public function afficherAction()
-		{
-			$name="plop";
-      return $this->render('omggotBundle:Default:afficher.html.twig', array('name' => $name));	
-		}
-		public function ajouterAction()
-		{
-			$name="plop";
-      return $this->render('omggotBundle:Default:ajouter.html.twig', array('name' => $name));	
-		}
+	public function afficherAction()
+	{
+			$name='test';
+    return $this->render('omggotBundle:Default:afficher.html.twig', array('name' => $name));
+
+	}
 }
