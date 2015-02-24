@@ -15,5 +15,9 @@ class DefaultController extends Controller
 			$name="plop";
       return $this->render('omggotBundle:Default:afficher.html.twig', array('name' => $name));	
 		}
-		public function 
+		public function ajouterAction()
+		{
+			$name="plop";
+      return $this->render('omggotBundle:Default:ajouter.html.twig', array('name' => $name));	
+		}
 }
