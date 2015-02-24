@@ -26,6 +26,8 @@ class Competences
 
     public function __construct() 
     {
+        $this->nom = "aucun nom de compétences défini";
+        $this->description = "Aucune description";
         $this->personnages = new ArrayCollection();
     }
 
@@ -108,5 +110,38 @@ class Competences
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Add personnages
+     *
+     * @param \omg\gotBundle\Entity\Personnage $personnages
+     * @return Competences
+     */
+    public function addPersonnage(\omg\gotBundle\Entity\Personnage $personnages)
+    {
+        $this->personnages[] = $personnages;
+
+        return $this;
+    }
+
+    /**
+     * Remove personnages
+     *
+     * @param \omg\gotBundle\Entity\Personnage $personnages
+     */
+    public function removePersonnage(\omg\gotBundle\Entity\Personnage $personnages)
+    {
+        $this->personnages->removeElement($personnages);
+    }
+
+    /**
+     * Get personnages
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPersonnages()
+    {
+        return $this->personnages;
     }
 }

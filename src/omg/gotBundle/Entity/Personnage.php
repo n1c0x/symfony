@@ -24,6 +24,10 @@ class Personnage
 
     public function __construct()
     {
+        $this->nom = "non défini";
+        $this->description = "Aucune description";
+        $this->maison = null;
+        $this->age = null;
         $this->competences = new ArrayCollection();
     }
 

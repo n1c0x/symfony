@@ -22,6 +22,8 @@ class Experience
 
     public function __construct()
     {
+        $this->nom = "Aucune définition d'experience";
+        $this->points = 0;
         $this->personnages = new ArrayCollection();
     }
 

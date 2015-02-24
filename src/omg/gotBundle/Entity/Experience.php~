@@ -22,6 +22,8 @@ class Experience
 
     public function __construct()
     {
+        $this->nom = "Aucune définition d'experience";
+        $this->points = 0;
         $this->personnages = new ArrayCollection();
     }
 
@@ -104,5 +106,38 @@ class Experience
     public function getPoints()
     {
         return $this->points;
+    }
+
+    /**
+     * Add personnages
+     *
+     * @param \omg\gotBundle\Entity\Personnage $personnages
+     * @return Experience
+     */
+    public function addPersonnage(\omg\gotBundle\Entity\Personnage $personnages)
+    {
+        $this->personnages[] = $personnages;
+
+        return $this;
+    }
+
+    /**
+     * Remove personnages
+     *
+     * @param \omg\gotBundle\Entity\Personnage $personnages
+     */
+    public function removePersonnage(\omg\gotBundle\Entity\Personnage $personnages)
+    {
+        $this->personnages->removeElement($personnages);
+    }
+
+    /**
+     * Get personnages
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPersonnages()
+    {
+        return $this->personnages;
     }
 }

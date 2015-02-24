@@ -24,6 +24,10 @@ class Personnage
 
     public function __construct()
     {
+        $this->nom = "non défini";
+        $this->description = "Aucune description";
+        $this->maison = null;
+        $this->age = null;
         $this->competences = new ArrayCollection();
     }
 
@@ -168,5 +172,38 @@ class Personnage
     public function getAge()
     {
         return $this->age;
+    }
+
+    /**
+     * Add competences
+     *
+     * @param \omg\gotBundle\Entity\Competences $competences
+     * @return Personnage
+     */
+    public function addCompetence(\omg\gotBundle\Entity\Competences $competences)
+    {
+        $this->competences[] = $competences;
+
+        return $this;
+    }
+
+    /**
+     * Remove competences
+     *
+     * @param \omg\gotBundle\Entity\Competences $competences
+     */
+    public function removeCompetence(\omg\gotBundle\Entity\Competences $competences)
+    {
+        $this->competences->removeElement($competences);
+    }
+
+    /**
+     * Get competences
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCompetences()
+    {
+        return $this->competences;
     }
 }

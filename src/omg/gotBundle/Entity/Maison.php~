@@ -22,6 +22,10 @@ class Maison
 
     public function  __construct()
     {
+        $this->nom = "Aucun nom de Maison défini";
+        $this->devise = "Aucune devise de Maison définie";
+        $this->blason = "Aucun blason de Maison défini";
+        $this->description = "Aucune description de Maison définie";
         $this->personages = new ArrayCollection();
     }
 
@@ -163,5 +167,38 @@ class Maison
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Add personnages
+     *
+     * @param \omg\gotBundle\Entity\Personnage $personnages
+     * @return Maison
+     */
+    public function addPersonnage(\omg\gotBundle\Entity\Personnage $personnages)
+    {
+        $this->personnages[] = $personnages;
+
+        return $this;
+    }
+
+    /**
+     * Remove personnages
+     *
+     * @param \omg\gotBundle\Entity\Personnage $personnages
+     */
+    public function removePersonnage(\omg\gotBundle\Entity\Personnage $personnages)
+    {
+        $this->personnages->removeElement($personnages);
+    }
+
+    /**
+     * Get personnages
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPersonnages()
+    {
+        return $this->personnages;
     }
 }

@@ -22,6 +22,10 @@ class Maison
 
     public function  __construct()
     {
+        $this->nom = "Aucun nom de Maison défini";
+        $this->devise = "Aucune devise de Maison définie";
+        $this->blason = "Aucun blason de Maison défini";
+        $this->description = "Aucune description de Maison définie";
         $this->personages = new ArrayCollection();
     }
 

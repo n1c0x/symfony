@@ -26,6 +26,8 @@ class Competences
 
     public function __construct() 
     {
+        $this->nom = "aucun nom de compétences défini";
+        $this->description = "Aucune description";
         $this->personnages = new ArrayCollection();
     }
 
