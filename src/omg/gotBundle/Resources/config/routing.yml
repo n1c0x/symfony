@@ -9,3 +9,7 @@ got_ajouter:
 got_rechercher:
     path:     /rechercher
     defaults: { _controller: omggotBundle:Got:rechercher }
+
+got_success:
+    path:     /success
+    defaults: { _controller: omggotBundle:Got:success }
