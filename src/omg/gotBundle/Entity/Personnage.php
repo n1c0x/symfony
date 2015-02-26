@@ -3,6 +3,7 @@
 namespace omg\gotBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Personnage
@@ -206,5 +207,8 @@ class Personnage
     {
         return $this->competences;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e136e4dd185e86f692e4be47f4b4a90a3baa04de
 }

@@ -2,14 +2,18 @@
 
 namespace omg\gotBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function accueilAction($name)
     {
-        return new Response('<html><body>Coucou '.$name.'</body></html>');
-        #return $this->render('omggotBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('omggotBundle:omggot:index.html.twig', array('name' => $name));
     }
+	public function afficherAction()
+	{
+			$name='test';
+    return $this->render('omggotBundle:omggot:afficher.html.twig', array('name' => $name));
+
+	}
 }

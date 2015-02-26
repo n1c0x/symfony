@@ -1,3 +1,15 @@
-omggot_homepage:
-    path:     /index
-    defaults: { _controller: omggotBundle:Default:index }
+got_accueil:
+    path:     /accueil
+    defaults: { _controller: omggotBundle:Got:accueil }
+
+got_ajouter:
+    path:     /ajouter
+    defaults: { _controller: omggotBundle:Got:ajouter }
+
+got_rechercher:
+    path:     /rechercher
+    defaults: { _controller: omggotBundle:Got:rechercher }
+
+got_success:
+    path:     /success
+    defaults: { _controller: omggotBundle:Got:success }
