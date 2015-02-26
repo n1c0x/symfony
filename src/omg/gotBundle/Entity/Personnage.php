@@ -206,4 +206,5 @@ class Personnage
     {
         return $this->competences;
     }
+
 }
