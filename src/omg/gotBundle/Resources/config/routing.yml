@@ -1,15 +1,15 @@
 got_accueil:
     path:     /accueil
-    defaults: { _controller: omggotBundle:Got:accueil }
+    defaults: { _controller: omggotBundle:Personnage:accueil }
 
 got_ajouter:
     path:     /ajouter
-    defaults: { _controller: omggotBundle:Got:ajouter }
+    defaults: { _controller: omggotBundle:Personnage:ajouter }
 
 got_rechercher:
     path:     /rechercher
-    defaults: { _controller: omggotBundle:Got:rechercher }
+    defaults: { _controller: omggotBundle:Personnage:rechercher }
 
 got_success:
     path:     /success
-    defaults: { _controller: omggotBundle:Got:success }
+    defaults: { _controller: omggotBundle:Personnage:success }

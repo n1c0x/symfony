@@ -1,1 +1,4 @@
-Hello {{ name }}!
+{% for perso in personnages %}
+    <li>Nom : {{ perso.nom }} </li>
+    <li>Description : {{ perso.description }} </li>
+{% endfor %}

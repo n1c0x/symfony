@@ -207,8 +207,4 @@ class Personnage
     {
         return $this->competences;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> e136e4dd185e86f692e4be47f4b4a90a3baa04de
 }
