@@ -21,19 +21,40 @@ class PersonnageController extends Controller
         }
 
         return $this->render('omggotBundle:Got:accueil.html.twig', array('personnages' => $personnages));
-	}
+    }
+
+    public function personnageAction($id)
+    {
+        $personnage = new Personnage();
+        $personnage = $this->getDoctrine()->getRepository('omggotBundle:Personnage')->find($id);
+        if(!$personnage)
+        {   
+            throw $this->createNotFoundException('Aucun Personnage trouvé');
+        }
+        
+        return $this->render('omggotBundle:Got:fiche_perso.html.twig', array('personnage' => $personnage));
+    }
+
 	public function ajouterAction(Request $request)
 	{
 		# Création d'un nouvel objet personnage
-		$personnage = new Personnage();
+	    $personnage = new Personnage();
+    
+
 
 		# Ajout des champs
 		$form = $this->createFormBuilder($personnage)
 			->add('nom','text')
 			->add('description','text')
-			#->add('maison','text')
-			#->add('age','text')
-			//->add('competences','text')
+            ->add('maison','entity', array(
+                'class' => 'omggotBundle:Maison',
+                'property' => 'nom'))
+            ->add('age', 'entity', array(
+                'class' => 'omggotBundle:Experience',
+                'property' => 'nom'))
+            ->add('competences','entity', array(
+                'class' => 'omggotBundle:Competences',
+                'property' => 'nom'))
 			->add('save','submit')
 			->getForm();
 		
@@ -41,8 +62,8 @@ class PersonnageController extends Controller
 
 		if ($form->isValid()){
 			$em = $this->getDoctrine()->getManager();
-			//$repository_personnage = $em->getRepository('omggotBundle:Got');
-			# On insère l'instance de personnage dans la liste des élements à enregistrer en base.
+            
+            # On insère l'instance de personnage dans la liste des élements à enregistrer en base.
 			# Les données ne sont pas encore écrites
 			$em->persist($personnage);
 
@@ -65,4 +86,6 @@ class PersonnageController extends Controller
 		$name = "succes";
         return $this->render('omggotBundle:Got:success.html.twig', array('name' => $name));
     }
+
+
 }
