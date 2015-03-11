@@ -1,0 +1,4 @@
+{% for comp in competences %}
+    <li><a href="{{ path('got_fiche_comp',{'id' : comp.id })}}">{{ comp.Nom  }} </a></li>
+    <li> {{ comp.description }} </li>
+{% endfor %}

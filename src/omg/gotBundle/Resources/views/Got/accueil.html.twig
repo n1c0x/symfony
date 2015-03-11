@@ -1,0 +1,5 @@
+{% for perso in personnages %}
+    <li><a href="{{ path('got_fiche_perso',{'id' : perso.id })}}">{{ perso.Nom  }} </a></li>
+    <li>Maison {{ perso.maison }} </li>
+    <li>Description : {{ perso.description }} </li>
+{% endfor %}
