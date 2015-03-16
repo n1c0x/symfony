@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+    
+    <a href="{{ path('omg_addsheet') }}">add sheet</a>
+       
+    <ul>
+        {% for sheet in sheets %}
+            <li>{{ house.getTitle() }}</a>
+                <a href="{{ path('omg_getsheet', {'id_sheet':sheet.getId()}) }}">Voir</a>
+                <a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}">Update</a>
+                <a href="{{ path('omg_deletesheet', {'id_sheet':sheet.getId()}) }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+        
+    <a href="{{ path('omg_homepage') }}">retourner au menu</a>
+{% endblock %}
+            

@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+    
+    <a href="{{ path('omg_addskill') }}">add Skill</a>
+       
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill.getName() }}</a>
+                <a href="{{ path('omg_getskill', {'id_skill':skill.getId()}) }}">Voir</a>
+                <a href="{{ path('omg_updateskill', {'id_skill':skill.getId()}) }}">Update</a>
+                <a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+        
+    <a href="{{ path('omg_homepage') }}">retourner au menu</a>
+{% endblock %}
+            
