@@ -1,3 +1,0 @@
-omggot_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: omggotBundle:Default:index }
