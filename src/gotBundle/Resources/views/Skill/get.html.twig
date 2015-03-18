@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+    <a href="{{ path('omg_getlistskill') }}">Voir liste</a>
+    <a href="{{ path('omg_updateskill', {'id_skill':skill.getId()}) }}">Mettre a jour</a>
+    <a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}">Effacer</a><br><br>
+    
+    id: {{skill.getId()}}<br>
+    nom: {{skill.getName()}}<br>
+    description: {{skill.getDescription()}}
+    
+{% endblock %}
+            

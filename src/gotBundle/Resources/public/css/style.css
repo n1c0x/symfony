@@ -1,0 +1,291 @@
+*{
+    margin: 0px;
+    font-family: Calibri;
+    font-size: 14px;
+    color: #12719D;
+}
+a{
+    //color: #4F5E69;
+    text-decoration: none;
+}
+html{
+    background-color: #B9DBF3;
+}
+#banniere_logo_recherche{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 90px;
+    background-color: #A4C3D8;
+    text-align: center;
+}
+#banniere_logo_recherche img{
+    width: 120px;
+    position: relative;
+    top: -70px;
+}
+.boite_banniere{
+    padding: 5px;
+    background-color: #87A0B2;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+}
+#ajout_personnage_banniere{
+    position: absolute;
+    top: 30px;
+    left: 90px;
+}
+#recherche_banniere{
+    position: absolute;
+    top: 30px;
+    right: 90px;
+}
+#recherche_banniere input{
+    width: 100px;
+    margin-left: 5px;
+}
+#container{
+    margin: 0px 90px;
+    margin-top: 180px;
+}
+.feuille_personnage{
+    background-color: #87a0b2;
+    width: 240px;
+    height: 130px;
+    float: left;
+    margin-right: 80px;
+    margin-top: 90px;
+    position: relative;
+    //top: 90px;
+    padding: 10px;
+}
+.feuille_personnage img{
+    height: 130px;
+    width: 80px;
+}
+.nom_personnage{
+    background-color: #12719D;
+    color: white;
+    height: 26px;
+    width: 130px;
+    line-height: 26px;
+    padding-left: 7px;
+    position: relative;
+    left: 90px;
+    top: -130px;
+}
+.nom_personnage_triangle_top{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 13px 0 0;
+    border-color: #12719d transparent transparent transparent;
+    position: absolute;
+    right: -13px;
+    top: 0px;
+}
+.nom_personnage_triangle_bottom{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 0 0 13px;
+    border-color: transparent transparent transparent #12719d;
+    position: absolute;
+    right: -13px;
+    top: 13px;
+}
+.maison_personnage{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    color: black;
+    width: 130px;
+    position: relative;
+    top: -120px;
+    left: 100px;
+}
+.en_savoir_plus_personnage{
+    width: 70px;
+    padding: 5px;
+    font-style: italic;
+    position: relative;
+    bottom: 80px;
+    left: 100px;
+}
+.logo_maison_personnage{
+    background-color: #A0AFB8;
+    width: 60px;
+    height: 60px;
+    border-radius: 120px;
+    position: absolute;
+    bottom: -30px;
+    left: 230px;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.50);
+    -moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.50);
+    box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.50);
+}
+
+
+#container_afficher_personnage{
+    //border: 1px solid black;
+    margin: 0px 90px;
+    position: relative;
+    top: 250px;
+    background-color: #87A0B2;
+    padding: 30px;
+}
+#container_afficher_personnage img{
+    height: 300px;
+    width: 200px;
+}
+#nom_personnage_afficher{
+    background-color: #12719D;
+    color: white;
+    font-size: 2em;
+    height: 46px;
+    width: 300px;
+    line-height: 46px;
+    padding-left: 40px;
+    position: relative;
+    left: 200px;
+    top: -300px;
+}
+
+#nom_personnage_afficher_triangle_top{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23px 23px 0 0;
+    border-color: #12719d transparent transparent transparent;
+    position: absolute;
+    right: -23px;
+    top: 0px;
+}
+#nom_personnage_afficher_triangle_bottom{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23px 0 0 23px;
+    border-color: transparent transparent transparent #12719d;
+    position: absolute;
+    right: -23px;
+    top: 23px;
+}
+#boutons_editer_supp_ajouter{
+    width: auto;
+    float: right;
+    position: relative;
+    bottom: 346px;
+}
+
+.bouton_editer_supp_ajouter{
+    background-color: #A4C3D8;
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#age_maison{
+    float: left;
+    float: left;
+    position: absolute;
+    top: 100px;
+    left: 270px;
+}
+#age_maison p{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size: 20px;
+}
+#en_savoir_plus_personnage_afficher{
+    float: left;
+    float: left;
+    position: absolute;
+    top: 160px;
+    left: 270px;
+}
+#en_savoir_plus_personnage_afficher a{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-style: italic;
+    color: #A4C3D8;
+    font-size: 17px;
+}
+#logo_maison_personnage_afficher{
+    background-color: #12719d;
+    width: 100px;
+    height: 100px;
+    border-radius: 160px;
+    float: left;
+    float: left;
+    position: absolute;
+    top: 230px;
+    left: 270px;
+}
+.separateur{
+    height: 2px;
+    background-color: #12719d;
+    margin: 20px 0px;
+}
+
+/**************
+Caracéristiques
+**************/
+
+.caracteristiques_outside_left{
+    float: left;
+    background-color: #A4C3D8;
+    width: 30%;
+    padding: 5px;
+}
+.caracteristiques_outside_middle{
+    float: left;
+    background-color: #A4C3D8;
+    width: 30%;
+    padding: 5px;
+    margin: 0 auto;
+}
+.caracteristiques_outside_right{
+    float: right;
+    background-color: #A4C3D8;
+    width: 30%;
+    padding: 5px;
+}
+/*.separateur_vertical{
+    float: left;
+    background-color: black;
+    height: 10px;
+}*/
+
+.caracteristiques_left{
+    float: left;
+    border-right: 2px solid #12719d;
+    width: 250px;
+}
+.caracteristiques_left p{
+    line-height: 50px;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size: 20px;
+    color: black;
+    position: relative;
+    left: 30px;
+    width: 70%;
+}
+.logo_caract{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #12719d;
+    float: left;   
+}
+.caracteristiques_right{
+    float: left;
+    //border-left: 1px solid #12719d;
+    padding-left: 50px;
+}
+.caracteristiques_right p{
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 50px;
+}
+.separateur_horizontal{
+    height: 20px;
+}

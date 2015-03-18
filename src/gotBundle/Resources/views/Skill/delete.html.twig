@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+    etes vous sur de vouloir effacer le skill:<br><br>
+    
+    id: {{skill.getId()}}<br>
+    nom: {{skill.getName()}}<br>
+    description: {{skill.getDescription()}}<br>
+    
+        {{ form(form) }}
+
+
+    
+{% endblock %}
+            

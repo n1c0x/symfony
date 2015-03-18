@@ -1,5 +1,5 @@
-omggot:
-    resource: "@omggotBundle/Resources/config/routing.yml"
+omg:
+    resource: "@omgBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:

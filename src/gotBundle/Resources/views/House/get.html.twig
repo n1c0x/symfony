@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+    <a href="{{ path('omg_getlisthouse') }}">Voir liste</a>
+    <a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}">Mettre a jour</a>
+    <a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}">Effacer</a><br><br>
+    
+    id: {{house.getId()}}<br>
+    nom: {{house.getTitle()}}<br>
+    devise: {{house.getCatchphrase()}}<br>
+    devise: {{house.getDescription()}}<br>
+    emblème: {{house.getHeraldry()}}
+    
+    
+{% endblock %}
+            

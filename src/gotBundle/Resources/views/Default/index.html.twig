@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<!-- Banniere -->
+<div id="banniere_logo_recherche">
+    <img src="{{ asset('bundles/omg/img/logo.png') }}">
+    <a href="{{ path('omg_getlistsheet') }}">
+        <div class="boite_banniere" id="ajout_personnage_banniere">+ Personnages</div>
+    </a>
+    <div class="boite_banniere" id="recherche_banniere">Rechercher <input type="text"></div>
+</div>
+
+{# <a href="{{ path('omg_getlistsheet') }}">Sheet</a> #}
+<a href="{{ path('omg_getlisthouse') }}">House</a>
+<a href="{{ path('omg_getlistskill') }}">Skill</a>
+
+
+
+{% endblock %}

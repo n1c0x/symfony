@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+    <a href="{{ path('omg_getlisthouse') }}">Voir liste</a>
+    <a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}">Mettre a jour</a>
+    <a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}">Effacer</a><br><br>
+    
+	<!-- Liste des personnages -->
+    <div id="container_afficher_personnage">
+        <img src="ressources/vide.png">
+        <div id="nom_personnage_afficher">Nom du personnage
+            <div id="nom_personnage_afficher_triangle_top"></div>
+            <div id="nom_personnage_afficher_triangle_bottom"></div>
+        </div>
+        <div id="boutons_editer_supp_ajouter">
+            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}">Editer</a></div>
+            <div class="bouton_editer_supp_ajouter"><a href="{{  path('omg_deletesheet', {'id_sheet':sheet.getId()})  }}"Supprimer</div>
+        </div>
+        
+        <div id="age_maison">
+            <p>Age: &lt;Age du personnage&gt;</p>
+            <p>Maison du personnage</p>
+        </div>
+        
+        <div id="en_savoir_plus_personnage_afficher">
+            <a href="{{ path('omg_getskill', {'id_skill':skill.getId()})  }}">en savoir +</a>
+        </div>
+        <div id="logo_maison_personnage_afficher"></div>
+        
+        <div class="separateur"></div>
+        
+        <div id="description_personnage_afficher">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus efficitur bibendum. Praesent lorem ipsum, facilisis vulputate varius eu, dictum sit amet leo. Etiam a porttitor elit, sit amet egestas tortor. Suspendisse at augue ultricies, tincidunt risus non, faucibus erat. Ut egestas nibh nec felis tincidunt imperdiet. Nam odio purus, mollis sit amet ex non, fringilla congue orci. Curabitur dictum velit eget rutrum rutrum. Praesent a elit et erat dignissim eleifend. Phasellus quis imperdiet mauris. Cras a aliquam sapien. Cras lobortis sem nunc, vitae dapibus felis volutpat nec. Maecenas non nisl tortor. Aenean venenatis eros sit amet ante consequat, nec vulputate orci venenatis. Morbi sodales vel massa vitae porttitor. Cras facilisis pretium placerat.</p><br>
+            <p>Praesent ac pulvinar nulla. Quisque hendrerit nulla vel justo blandit consequat. Morbi vitae lectus consectetur, vulputate risus ut, efficitur nunc. Nam convallis lectus nec sodales suscipit. Cras sit amet finibus tortor. Curabitur eu vulputate neque. Quisque mauris elit, rutrum nec est vitae, sollicitudin cursus justo. Suspendisse potenti. Etiam id arcu nulla.</p>
+        </div>
+    </div>
+            
+
+    
+    id: {{house.getId()}}<br>
+    nom: {{house.getTitle()}}<br>
+    devise: {{house.getCatchphrase()}}<br>
+    devise: {{house.getDescription()}}<br>
+    emblème: {{house.getHeraldry()}}
+    
+    
+{% endblock %}
+            

@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    
+    etes vous sur de vouloir effacer la fiche:<br><br>
+    
+    id: {{sheet.getId()}}<br>
+    nom: {{sheet.getTitle()}}<br>
+    
+        {{ form(form) }}
+
+
+    
+{% endblock %}
+            

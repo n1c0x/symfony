@@ -1,0 +1,60 @@
+omg_test:
+    path:   /test
+    defaults: { _controller: omgBundle:House:list_of_houses }
+
+
+
+
+omg_homepage:
+    path:     /start
+    defaults: { _controller: omgBundle:Default:index }
+    
+omg_addsheet:
+    path:     /sheet/add/
+    defaults: { _controller: omgBundle:Sheet:add }
+omg_getsheet:
+    path:     /sheet/get/{id_sheet}
+    defaults: { _controller: omgBundle:Sheet:get }
+omg_getlistsheet:
+    path:     /sheet/getlist/
+    defaults: { _controller: omgBundle:Sheet:getlist }    
+omg_updatesheet:
+    path:     /sheet/update/{id_sheet}
+    defaults: { _controller: omgBundle:Sheet:update }
+omg_deletesheet:
+    path:     /sheet/delete/{id_sheet}
+    defaults: { _controller: omgBundle:Sheet:delete }      
+    
+
+omg_addhouse:
+    path:     /house/add/
+    defaults: { _controller: omgBundle:House:add }
+omg_gethouse:
+    path:     /house/get/{id_house}
+    defaults: { _controller: omgBundle:House:get }
+omg_getlisthouse:
+    path:     /house/getlist/
+    defaults: { _controller: omgBundle:House:getlist }    
+omg_updatehouse:
+    path:     /house/update/{id_house}
+    defaults: { _controller: omgBundle:House:update }
+omg_deletehouse:
+    path:     /house/delete/{id_house}
+    defaults: { _controller: omgBundle:House:delete }    
+    
+    
+omg_addskill:
+    path:     /skill/add/
+    defaults: { _controller: omgBundle:Skill:add }
+omg_getskill:
+    path:     /skill/get/{id_skill}
+    defaults: { _controller: omgBundle:Skill:get }
+omg_getlistskill:
+    path:     /skill/getlist/
+    defaults: { _controller: omgBundle:Skill:getlist }    
+omg_updateskill:
+    path:     /skill/update/{id_skill}
+    defaults: { _controller: omgBundle:Skill:update }
+omg_deleteskill:
+    path:     /skill/delete/{id_skill}
+    defaults: { _controller: omgBundle:Skill:delete }
