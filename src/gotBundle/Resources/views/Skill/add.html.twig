@@ -3,7 +3,24 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    
-{{ form(form) }}
+<div id="container_afficher_personnage">
+
+	<table>
+	{{ form_start(form) }}
+	    {{ form_errors(form) }}
+	    <tr>
+		    <td>{{ form_label(form.Name, 'Nom de la compétence',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.Name, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.Description, 'Description',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.Description, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
+		</tr>
+	{{ form_end(form) }}
+	</table>
+
+</div>
 {% endblock %}

@@ -22,17 +22,11 @@ class SheetController extends Controller
                         array('choices' => 
                             array('Enfant' => 'Enfant',
                                 'Adolescent' => 'Adolescent'
-                                
-                                
-                                
-                                
-                                
-                                
                                 ),
                             'label' => 'Age')
                         )
                 ->add('houseid', 'entity', array('class' => 'omgBundle:House', 'property' => 'title', 'label' => 'Maison'))
-                ->add('description', 'text', array('label' => 'Description'))
+                ->add('description', 'textarea', array('label' => 'Description'))
                 ->add('skills', 'entity', array('class' => 'omgBundle:Skill', 'property' => 'name', 'label' => 'Skills','expanded'=>true, 'multiple' => true))
                 ->add('save', 'submit')
                 ->getForm();

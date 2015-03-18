@@ -17,7 +17,7 @@ class SkillController extends Controller
             
             $form = $this->createFormBuilder($Skill)
                 ->add('Name', 'text')
-                ->add('Description', 'text')
+                ->add('Description', 'textarea')
                 ->add('save', 'submit')
                 ->getForm();
             

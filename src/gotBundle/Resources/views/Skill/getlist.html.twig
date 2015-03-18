@@ -3,18 +3,19 @@
 {% block body %}
     
     
-    <a href="{{ path('omg_addskill') }}">add Skill</a>
-       
-    <ul>
-        {% for skill in skills %}
-            <li>{{ skill.getName() }}</a>
+    {# <a href="{{ path('omg_addskill') }}">add Skill</a> #}
+    <!-- Liste des compétences -->
+    <div id="container_afficher_personnage">
+        <a href="{{ path('omg_addskill') }}">Ajouter une compétence</a><br>
+            {% for skill in skills %}
+                {{ skill.getName() }}:
                 <a href="{{ path('omg_getskill', {'id_skill':skill.getId()}) }}">Voir</a>
                 <a href="{{ path('omg_updateskill', {'id_skill':skill.getId()}) }}">Update</a>
-                <a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
-        
-    <a href="{{ path('omg_homepage') }}">retourner au menu</a>
+                <a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}">Delete</a><br>
+            {% endfor %}
+
+        <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_homepage') }}">retourner au menu</a></div>
+    </div>
+
 {% endblock %}
             

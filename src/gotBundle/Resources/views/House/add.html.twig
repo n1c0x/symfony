@@ -3,7 +3,32 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    
-{{ form(form) }}
+
+<div id="container_afficher_personnage">
+	
+	<table>
+		{{ form_start(form) }}
+			{{ form_errors(form) }}
+		<tr>
+		    <td>{{ form_label(form.title, 'Nom de la maison',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.title, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.catchphrase, 'Devise', {'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.catchphrase, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.heraldry, 'Blason', {'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.heraldry, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.description, 'Description', {'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.description, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
+		</tr>
+		{{ form_end(form) }}
+	</table>
+</div>
 {% endblock %}

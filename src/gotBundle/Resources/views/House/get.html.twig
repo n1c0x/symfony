@@ -2,16 +2,37 @@
 
 {% block body %}
     
-    <a href="{{ path('omg_getlisthouse') }}">Voir liste</a>
-    <a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}">Mettre a jour</a>
-    <a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}">Effacer</a><br><br>
-    
+    <!-- Description d'une maison -->
+    <div id="container_afficher_personnage">
+        <img src="ressources/vide.png">
+        <div id="nom_personnage_afficher">{{ house.getTitle() }}
+            <div id="nom_personnage_afficher_triangle_top"></div>
+            <div id="nom_personnage_afficher_triangle_bottom"></div>
+        </div>
+        <div id="boutons_editer_supp_ajouter">
+            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_getlisthouse') }}">Tous</a></div>
+            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}">Editer</a></div>
+            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_deletehouse', {'id_house':house.getId()})  }}">Supprimer</a></div>
+        </div>
+        
+        <div id="age_maison">
+            <p>Devise: {{house.getCatchphrase()}}</p>
+            <p>Emblème: {{house.getHeraldry()}}</p>
+        </div>
+
+        {# <div id="logo_maison_personnage_afficher"></div> #}
+        <div class="separateur"></div>
+
+        <div id="description_personnage_afficher">
+            {{house.getDescription()}}
+        </div>
+    </div>
+{# 
     id: {{house.getId()}}<br>
     nom: {{house.getTitle()}}<br>
     devise: {{house.getCatchphrase()}}<br>
     devise: {{house.getDescription()}}<br>
     emblème: {{house.getHeraldry()}}
-    
-    
+  #}
+
 {% endblock %}
-            

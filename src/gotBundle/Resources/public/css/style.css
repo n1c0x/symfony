@@ -1,291 +1,270 @@
-*{
-    margin: 0px;
-    font-family: Calibri;
-    font-size: 14px;
-    color: #12719D;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-a{
-    //color: #4F5E69;
-    text-decoration: none;
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
 }
-html{
-    background-color: #B9DBF3;
+body {
+  line-height: 1;
 }
-#banniere_logo_recherche{
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*that's where the real shit begins*/
+
+body {
+  background: #d2e9f1;
+  font-family: 'Arial', sans-serif;
+}
+hr{
+    border:1px solid #12719d;
+    margin: 20px 0px 20px 0px;
     width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 90px;
-    background-color: #A4C3D8;
-    text-align: center;
 }
-#banniere_logo_recherche img{
-    width: 120px;
-    position: relative;
-    top: -70px;
+.row{
+   display: block;
+   clear: both;
+   overflow: hidden;
 }
-.boite_banniere{
-    padding: 5px;
-    background-color: #87A0B2;
-    width: 180px;
-    height: 30px;
-    line-height: 30px;
+header,footer {
+  width: 100%;
+  background-color: #B8D9E2;
+  height: 80px;
+  margin: 50px 0px;
+  clear: both;
+  padding-top: 40px;
 }
-#ajout_personnage_banniere{
-    position: absolute;
-    top: 30px;
-    left: 90px;
+#logo {
+  margin: auto;
+  width: 150px;
+  background: red;
 }
-#recherche_banniere{
-    position: absolute;
-    top: 30px;
-    right: 90px;
+#searchit {
+  float: right;
+  width:260px;
+  background:#a4c5ce;
+  padding:10px;
+  font-family: 'Georgia', serif;
+  color: #12718f;
 }
-#recherche_banniere input{
-    width: 100px;
-    margin-left: 5px;
+#searchit input {
+  display: inline-block;
 }
-#container{
-    margin: 0px 90px;
-    margin-top: 180px;
+.wrapper {
+  width: 1024px;
+  margin: auto;
+  clear: both;
+  display: block;
 }
-.feuille_personnage{
-    background-color: #87a0b2;
-    width: 240px;
-    height: 130px;
-    float: left;
-    margin-right: 80px;
-    margin-top: 90px;
-    position: relative;
-    //top: 90px;
-    padding: 10px;
+.button {
+  padding: 10px;
+  background: none;
+  font-family: 'Georgia', serif;
+  color: #12718f;
+  text-decoration: none;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
-.feuille_personnage img{
-    height: 130px;
-    width: 80px;
+.button:hover {
+  background: #12718f;
+  color: white;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
-.nom_personnage{
-    background-color: #12719D;
-    color: white;
-    height: 26px;
-    width: 130px;
-    line-height: 26px;
-    padding-left: 7px;
-    position: relative;
-    left: 90px;
-    top: -130px;
+
+#header .button{
+  float:left;
 }
-.nom_personnage_triangle_top{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 13px 13px 0 0;
-    border-color: #12719d transparent transparent transparent;
-    position: absolute;
-    right: -13px;
-    top: 0px;
+#main{
+  margin-bottom:40px;
+  height:auto;
+  overflow:hidden;
 }
-.nom_personnage_triangle_bottom{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 13px 0 0 13px;
-    border-color: transparent transparent transparent #12719d;
-    position: absolute;
-    right: -13px;
-    top: 13px;
+
+.personnage {
+  background: #a4c5ce;
+  float: left;
+  margin: 20px;
+  width: 27%;
+  padding: 10px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.5);
 }
-.maison_personnage{
-    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-    color: black;
-    width: 130px;
-    position: relative;
-    top: -120px;
-    left: 100px;
+.personnage img {
+  float: left;
+  width: 86px;
+  margin-right: 20px;
 }
-.en_savoir_plus_personnage{
-    width: 70px;
-    padding: 5px;
-    font-style: italic;
-    position: relative;
-    bottom: 80px;
-    left: 100px;
+.personnage .infos {
+  float: left;
 }
-.logo_maison_personnage{
-    background-color: #A0AFB8;
-    width: 60px;
-    height: 60px;
-    border-radius: 120px;
-    position: absolute;
-    bottom: -30px;
-    left: 230px;
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.50);
+.personnage .infos p {
+  top: 50px;
+  position: relative;
+}
+.personnage .infos a {
+  position: relative;
+  top: 100px;
+  text-decoration: none;
+  color: #156f92;
+  font-family: 'Georgia', serif;
 }
 
 
-#container_afficher_personnage{
-    //border: 1px solid black;
-    margin: 0px 90px;
-    position: relative;
-    top: 250px;
-    background-color: #87A0B2;
-    padding: 30px;
+#index .ribbon {
+  width: 140px;
+  height: 16px;
+  color: white;
+  position: absolute;
+  font-size: 14px!important;
+  background: #127092;
+  font-family: 'Georgia', serif;
+  padding: 10px;
+  left: 105px;
+  top: 10px;
 }
-#container_afficher_personnage img{
-    height: 300px;
-    width: 200px;
+#index .ribbon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0em;
+  border: 1.3em solid #127092;
+  z-index: 0;
 }
-#nom_personnage_afficher{
-    background-color: #12719D;
-    color: white;
-    font-size: 2em;
-    height: 46px;
-    width: 300px;
-    line-height: 46px;
-    padding-left: 40px;
-    position: relative;
-    left: 200px;
-    top: -300px;
-}
-
-#nom_personnage_afficher_triangle_top{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 23px 23px 0 0;
-    border-color: #12719d transparent transparent transparent;
-    position: absolute;
-    right: -23px;
-    top: 0px;
-}
-#nom_personnage_afficher_triangle_bottom{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 23px 0 0 23px;
-    border-color: transparent transparent transparent #12719d;
-    position: absolute;
-    right: -23px;
-    top: 23px;
-}
-#boutons_editer_supp_ajouter{
-    width: auto;
-    float: right;
-    position: relative;
-    bottom: 346px;
+#index .ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
 }
 
-.bouton_editer_supp_ajouter{
-    background-color: #A4C3D8;
-    width: 100px;
-    padding: 5px;
-    margin-bottom: 5px;
-    text-align: center;
+
+#display .ribbon {
+  width: 250px;
+  height: 28px;
+  color: white;
+  position: absolute;
+  font-size: 24px!important;
+  background: #127092;
+  font-family: 'Georgia', serif;
+  padding: 10px;
+  left: 200px;
+  top: 20px;
 }
-#age_maison{
-    float: left;
-    float: left;
-    position: absolute;
-    top: 100px;
-    left: 270px;
+#display .ribbon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0em;
+  border: 1em solid #127092;
+  z-index: 0;
 }
-#age_maison p{
-    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-    font-size: 20px;
-}
-#en_savoir_plus_personnage_afficher{
-    float: left;
-    float: left;
-    position: absolute;
-    top: 160px;
-    left: 270px;
-}
-#en_savoir_plus_personnage_afficher a{
-    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-    font-style: italic;
-    color: #A4C3D8;
-    font-size: 17px;
-}
-#logo_maison_personnage_afficher{
-    background-color: #12719d;
-    width: 100px;
-    height: 100px;
-    border-radius: 160px;
-    float: left;
-    float: left;
-    position: absolute;
-    top: 230px;
-    left: 270px;
-}
-.separateur{
-    height: 2px;
-    background-color: #12719d;
-    margin: 20px 0px;
+#display .ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
 }
 
-/**************
-Caracéristiques
-**************/
 
-.caracteristiques_outside_left{
-    float: left;
-    background-color: #A4C3D8;
-    width: 30%;
-    padding: 5px;
-}
-.caracteristiques_outside_middle{
-    float: left;
-    background-color: #A4C3D8;
-    width: 30%;
-    padding: 5px;
-    margin: 0 auto;
-}
-.caracteristiques_outside_right{
-    float: right;
-    background-color: #A4C3D8;
-    width: 30%;
-    padding: 5px;
-}
-/*.separateur_vertical{
-    float: left;
-    background-color: black;
-    height: 10px;
-}*/
+/*single-personnage*/
 
-.caracteristiques_left{
-    float: left;
-    border-right: 2px solid #12719d;
-    width: 250px;
+.single-personnage{
+  background:#a4c5ce;
+  padding:20px;
+  position:relative;
+  height:auto;
+  overflow:hidden;
 }
-.caracteristiques_left p{
-    line-height: 50px;
-    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-    font-size: 20px;
-    color: black;
-    position: relative;
-    left: 30px;
-    width: 70%;
+
+.single-personnage .portrait{
+  float:left;
+  margin-right:20px;
 }
-.logo_caract{
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    background-color: #12719d;
-    float: left;   
+.single-personnage .infos{
+  float:left;
+  width:50%;
 }
-.caracteristiques_right{
-    float: left;
-    //border-left: 1px solid #12719d;
-    padding-left: 50px;
+.single-personnage .infos-inner{
+  float:left;
 }
-.caracteristiques_right p{
-    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-    font-size: 15px;
-    font-style: italic;
-    line-height: 50px;
+.single-personnage .infos-inner p{
+  position:relative;
+  top:60px;
+  font-size:24px;
+  line-height:30px;
+  color:#127092;
 }
-.separateur_horizontal{
+.single-personnage .infos-inner a{
+  position: relative;
+  top: 80px;
+  text-decoration: none;
+  color: #156f92;
+  font-family: 'Georgia', serif;
+}
+.single-personnage .infos-inner img{
+  position:relative;
+  top:180px;
+}
+.single-personnage .actions{
+  float:right;
+}
+.single-personnage .actions a{
+  display:inline;
+}
+.single-personnage .biographie{
+  font-size:16px;
+  line-height:24px;
+}
+.single-personnage .onecomp{
+  float:left;
+  width:29%;
+  margin:10px;
+  background:#bad8e2;
+  padding:10px;
+}
+
+
+.champ_formulaire{
     height: 20px;
+    width: 300px;
+}
+#form_description{
+    height: 4em !important;
+    max-height: 60px !important;
+    resize: none !important;
+}
+.label_formulaire{
+  padding: 5px;
 }

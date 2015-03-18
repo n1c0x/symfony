@@ -9,18 +9,18 @@
 	<!-- Liste des personnages -->
     <div id="container_afficher_personnage">
         <img src="ressources/vide.png">
-        <div id="nom_personnage_afficher">Nom du personnage
+        <div id="nom_personnage_afficher">{{ sheet.getTitle() }}
             <div id="nom_personnage_afficher_triangle_top"></div>
             <div id="nom_personnage_afficher_triangle_bottom"></div>
         </div>
         <div id="boutons_editer_supp_ajouter">
             <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}">Editer</a></div>
-            <div class="bouton_editer_supp_ajouter"><a href="{{  path('omg_deletesheet', {'id_sheet':sheet.getId()})  }}"Supprimer</div>
+            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_deletesheet', {'id_sheet':sheet.getId()})  }}">Supprimer</div>
         </div>
         
         <div id="age_maison">
-            <p>Age: &lt;Age du personnage&gt;</p>
-            <p>Maison du personnage</p>
+            <p>Age: {{ sheet.getAge() }}</p>
+            <p>{{ house.getTitle() }}</p>
         </div>
         
         <div id="en_savoir_plus_personnage_afficher">

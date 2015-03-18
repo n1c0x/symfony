@@ -18,7 +18,7 @@ class HouseController extends Controller
                 ->add('title', 'text')
                 ->add('catchphrase', 'text')
                 ->add('heraldry', 'text')
-                ->add('description', 'text')                    
+                ->add('description', 'textarea')                    
                 ->add('save', 'submit')
                 ->getForm();
             

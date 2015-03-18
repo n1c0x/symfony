@@ -1,15 +1,12 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    etes vous sur de vouloir effacer le house:<br><br>
-    
-    id: {{house.getId()}}<br>
-    nom: {{house.getTitle()}}<br>
-    
-        {{ form(form) }}
 
+<!-- Suppression d'une maison -->
+<div id="container_afficher_personnage">
+    Etes vous sur de vouloir effacer la maison "{{house.getTitle()}}" ?
+	{{ form(form) }}
+</div>
 
-    
 {% endblock %}
             

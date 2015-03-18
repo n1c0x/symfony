@@ -3,18 +3,18 @@
 {% block body %}
     
     
-    <a href="{{ path('omg_addhouse') }}">add house</a>
-       
-    <ul>
-        {% for house in houses %}
-            <li>{{ house.getTitle() }}</a>
+    {# <a href="{{ path('omg_addhouse') }}">add house</a> #}
+    <!-- Liste des maisons -->
+    <div id="container_afficher_personnage">
+        <a href="{{ path('omg_addhouse') }}">Ajouter une maison</a><br>
+            {% for house in houses %}
+                {{ house.getTitle() }}:
                 <a href="{{ path('omg_gethouse', {'id_house':house.getId()}) }}">Voir</a>
                 <a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}">Update</a>
-                <a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
-        
-    <a href="{{ path('omg_homepage') }}">retourner au menu</a>
+                <a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}">Delete</a><br>
+            {% endfor %}
+
+        <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_homepage') }}">retourner au menu</a></div>
+    </div>
+
 {% endblock %}
-            

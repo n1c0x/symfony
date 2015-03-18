@@ -3,7 +3,36 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    
-{{ form(form) }}
+
+<div id="container_afficher_personnage">
+	<table>
+	{{ form_start(form) }}
+	    {{ form_errors(form) }}
+	    <tr>
+		    <td>{{ form_label(form.name, 'Nom du personnage',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.name, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.age, 'Age',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.age, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.houseid, 'Maison',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.houseid, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.skills, 'Compétences',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.skills, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_label(form.description, 'Description',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
+		    <td>{{ form_widget(form.description, {'attr': {'class':'champ_formulaire'}}) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
+		</tr>
+	{{ form_end(form) }}
+	</table>
+</div>
+
 {% endblock %}

@@ -2,12 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/omg/css/style.css') }}" >
+        <title>Oh mein Got</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/omg/css/style2.css') }}" >
+        {# <link rel="stylesheet" type="text/css" href="{{ asset('bundles/omg/css/style.css') }}" > #}
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        <!-- Banniere -->
+        <div id="banniere_logo_recherche">
+            <a href="{{ path('omg_homepage') }}"><img src="{{ asset('bundles/omg/img/logo.png') }}"></a>
+            <a href="{{ path('omg_addsheet') }}">
+                <div class="boite_banniere" id="ajout_personnage_banniere">+ Personnages</div>
+            </a>
+            <div class="boite_banniere" id="recherche_banniere">Rechercher <input type="text"></div>
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
