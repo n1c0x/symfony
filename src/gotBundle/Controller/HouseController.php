@@ -68,10 +68,10 @@ class HouseController extends Controller
             } 
             
             $form = $this->createFormBuilder($House)
-                ->add('Title', 'text')
-                ->add('Catchphrase', 'text')
-                ->add('Heraldry', 'text')
-                ->add('Description', 'text')
+                ->add('title', 'text')
+                ->add('catchphrase', 'text')
+                ->add('heraldry', 'text')
+                ->add('description', 'textarea')
                 ->add('save', 'submit')
                 ->getForm();
             

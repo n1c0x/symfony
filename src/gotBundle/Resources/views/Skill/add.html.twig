@@ -3,24 +3,22 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-<div id="container_afficher_personnage">
 
-	<table>
+<table class="champ_formulaire">
 	{{ form_start(form) }}
-	    {{ form_errors(form) }}
-	    <tr>
-		    <td>{{ form_label(form.Name, 'Nom de la compétence',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
-		    <td>{{ form_widget(form.Name, {'attr': {'class':'champ_formulaire'}}) }}</td>
-		</tr>
-		<tr>
-		    <td>{{ form_label(form.Description, 'Description',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
-		    <td>{{ form_widget(form.Description, {'attr': {'class':'champ_formulaire'}}) }}</td>
-		</tr>
-		<tr>
-			<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
-		</tr>
+	{{ form_errors(form) }}
+	<tr>
+		<td>{{ form_label(form.Name, 'Nom') }}</td>
+		<td>{{ form_widget(form.Name) }}</td>
+	</tr>
+	<tr>
+		<td>{{ form_label(form.Description, 'Description') }}</td>
+		<td>{{ form_widget(form.Description) }}</td>
+	</tr>
+	<tr>
+		<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
+	</tr>
 	{{ form_end(form) }}
-	</table>
+</table>
 
-</div>
 {% endblock %}

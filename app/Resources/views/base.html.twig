@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Oh mein Got</title>
-        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/omg/css/style2.css') }}" >
-        {# <link rel="stylesheet" type="text/css" href="{{ asset('bundles/omg/css/style.css') }}" > #}
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        <!-- Banniere -->
-        <div id="banniere_logo_recherche">
-            <a href="{{ path('omg_homepage') }}"><img src="{{ asset('bundles/omg/img/logo.png') }}"></a>
-            <a href="{{ path('omg_addsheet') }}">
-                <div class="boite_banniere" id="ajout_personnage_banniere">+ Personnages</div>
-            </a>
-            <div class="boite_banniere" id="recherche_banniere">Rechercher <input type="text"></div>
-        </div>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Oh mein Got</title>
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/omg/css/style.css') }}" >
+		<link rel="icon" type="image/png" href="{{ asset('bundles/omg/img/logo.png') }}" />
+		{# <link rel="stylesheet" type="text/css" href="{{ asset('bundles/omg/css/style2.css') }}" > #}
+		<title>{% block title %}Welcome!{% endblock %}</title>
+		{% block stylesheets %}{% endblock %}
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+	</head>
+	<body id="index">
+		{# Logo #}
+		<div id="logo">
+			<a href="{{ path('omg_homepage') }}"><img src="{{ asset('bundles/omg/img/logo.png') }}"></a>
+		</div>
+
+		{# Banniere #}
+		<header id="header" role="banner">
+			<div class="wrapper">
+				<a class="button" href="{{ path('omg_addsheet') }}" target="_blank">+ Ajouter un personnage</a>
+				<a class="button" href="{{ path('omg_addhouse') }}" target="_blank">+ Ajouter une maison</a>
+				<a class="button" href="{{ path('omg_addskill') }}" target="_blank">+ Ajouter une compétence</a>
+				<form id="searchit" action="php">
+					<label for="search">Rechercher</label>
+					<input type="text" id="search" name="search">
+					<input type="submit" value="OK">
+				</form>
+			</div>
+		</header>
+		<div id="main" class="wrapper" role="main">
+			{% block body %}{% endblock %}
+			{% block javascripts %}{% endblock %}
+		</div>
+	</body>
 </html>

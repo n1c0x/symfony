@@ -1,38 +1,27 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    <!-- Description d'une maison -->
-    <div id="container_afficher_personnage">
-        <img src="ressources/vide.png">
-        <div id="nom_personnage_afficher">{{ house.getTitle() }}
-            <div id="nom_personnage_afficher_triangle_top"></div>
-            <div id="nom_personnage_afficher_triangle_bottom"></div>
-        </div>
-        <div id="boutons_editer_supp_ajouter">
-            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_getlisthouse') }}">Tous</a></div>
-            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}">Editer</a></div>
-            <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_deletehouse', {'id_house':house.getId()})  }}">Supprimer</a></div>
-        </div>
-        
-        <div id="age_maison">
-            <p>Devise: {{house.getCatchphrase()}}</p>
-            <p>Emblème: {{house.getHeraldry()}}</p>
-        </div>
+	
+	<!-- Description d'une maison -->
+	<div class="single-personnage" id="display">
+		<div class="row">
 
-        {# <div id="logo_maison_personnage_afficher"></div> #}
-        <div class="separateur"></div>
+			<div class="infos">
+			  <img class="portrait" src="{{ asset('bundles/omg/img/vide.png') }}">
 
-        <div id="description_personnage_afficher">
-            {{house.getDescription()}}
-        </div>
-    </div>
-{# 
-    id: {{house.getId()}}<br>
-    nom: {{house.getTitle()}}<br>
-    devise: {{house.getCatchphrase()}}<br>
-    devise: {{house.getDescription()}}<br>
-    emblème: {{house.getHeraldry()}}
-  #}
+				<div class="infos-inner">
+					<h2 class="ribbon">{{ house.getTitle() }}</h2>
+					<p>&ldquo;{{house.getCatchphrase()}}&rdquo;</p>
+					<p>Emblème: {{house.getHeraldry()}}</p>
+					<p>{{house.getDescription()}}</p>
+				</div>
+				<hr>
+			</div>
 
+			<div class="actions">
+				<a class="button" href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}" target="_blank" >Editer</a>
+				<a class="button" href="{{ path('omg_deletehouse', {'id_house':house.getId()})  }}" target="_blank" >Supprimer</a>
+			</div>
+
+	</div><!--row-->
 {% endblock %}

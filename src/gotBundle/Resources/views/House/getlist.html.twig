@@ -1,20 +1,17 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    
-    {# <a href="{{ path('omg_addhouse') }}">add house</a> #}
-    <!-- Liste des maisons -->
-    <div id="container_afficher_personnage">
-        <a href="{{ path('omg_addhouse') }}">Ajouter une maison</a><br>
-            {% for house in houses %}
-                {{ house.getTitle() }}:
-                <a href="{{ path('omg_gethouse', {'id_house':house.getId()}) }}">Voir</a>
-                <a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}">Update</a>
-                <a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}">Delete</a><br>
-            {% endfor %}
 
-        <div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_homepage') }}">retourner au menu</a></div>
-    </div>
-
+	<!-- Liste des maisons -->
+	{% for house in houses %}
+		<div class="personnage maison">
+			<img src="{{ asset('bundles/omg/img/vide.png') }}">
+			<div class="infos">
+				<h2 class="ribbon">{{ house.getTitle() }}</h2>
+				<a href="{{ path('omg_gethouse', {'id_house':house.getId()}) }}" target="_blank" class="button button_small">En savoir +</a>
+				<a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}" target="_blank" class="button button_small">Modifier</a>
+				<a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}" target="_blank">Supprimer</a>
+			</div>
+		</div>
+	{% endfor %}
 {% endblock %}

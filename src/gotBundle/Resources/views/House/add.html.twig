@@ -3,27 +3,26 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-
-<div id="container_afficher_personnage">
-	
+<div class="champ_formulaire">
+	<h2 class="titre">Ajouter une maison</h2>
 	<table>
 		{{ form_start(form) }}
-			{{ form_errors(form) }}
+		{{ form_errors(form) }}
 		<tr>
-		    <td>{{ form_label(form.title, 'Nom de la maison',{'label_attr': {'class': 'label_formulaire'}}) }}</td>
-		    <td>{{ form_widget(form.title, {'attr': {'class':'champ_formulaire'}}) }}</td>
+			<td>{{ form_label(form.title, 'Nom') }}</td>
+			<td>{{ form_widget(form.title) }}</td>
 		</tr>
 		<tr>
-		    <td>{{ form_label(form.catchphrase, 'Devise', {'label_attr': {'class': 'label_formulaire'}}) }}</td>
-		    <td>{{ form_widget(form.catchphrase, {'attr': {'class':'champ_formulaire'}}) }}</td>
+			<td>{{ form_label(form.catchphrase, 'Devise') }}</td>
+			<td>{{ form_widget(form.catchphrase) }}</td>
 		</tr>
 		<tr>
-		    <td>{{ form_label(form.heraldry, 'Blason', {'label_attr': {'class': 'label_formulaire'}}) }}</td>
-		    <td>{{ form_widget(form.heraldry, {'attr': {'class':'champ_formulaire'}}) }}</td>
+			<td>{{ form_label(form.heraldry, 'Blason') }}</td>
+			<td>{{ form_widget(form.heraldry) }}</td>
 		</tr>
 		<tr>
-		    <td>{{ form_label(form.description, 'Description', {'label_attr': {'class': 'label_formulaire'}}) }}</td>
-		    <td>{{ form_widget(form.description, {'attr': {'class':'champ_formulaire'}}) }}</td>
+			<td>{{ form_label(form.description, 'Description') }}</td>
+			<td>{{ form_widget(form.description) }}</td>
 		</tr>
 		<tr>
 			<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>

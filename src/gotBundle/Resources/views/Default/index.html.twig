@@ -2,10 +2,48 @@
 
 {% block body %}
 
-<div id="container_afficher_personnage">
-	<div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_getlistsheet') }}">Personnage</a></div>
-	<div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_getlisthouse') }}">Maison</a></div>
-	<div class="bouton_editer_supp_ajouter"><a href="{{ path('omg_getlistskill') }}">Compétence</a></div>
-</div>
+	{# <a class="button" href="{{ path('omg_getlistsheet') }}">Liste des Personnages</a>
+	<a class="button" href="{{ path('omg_getlisthouse') }}">Liste des Maisons</a>
+	<a class="button"  href="{{ path('omg_getlistskill') }}">Liste des Compétences</a> #}
+
+	<div class="personnage">
+		<img src="{{ asset('bundles/omg/img/vide.png') }}">
+		<div class="infos">
+			<h2 class="ribbon">Cersei Lannister</h2>
+			<p>Maison Lannister</p>
+			{# <a href="{{ path('omg_getsheet', {'id_sheet':sheet.getId()}) }}">en savoir +</a> #}
+			<a href="#">en savoir +</a>
+		</div>
+	</div>
+
+	<div class="personnage">
+		<img src="{{ asset('bundles/omg/img/vide.png') }}">
+		<div class="infos">
+			<h2 class="ribbon">Cersei Lannister</h2>
+			<p>Maison Lannister</p>
+			{# <a href="{{ path('omg_getsheet', {'id_sheet':sheet.getId()}) }}">en savoir +</a> #}
+			<a href="#">en savoir +</a>
+		</div>
+	</div>
+
+	<div class="personnage">
+		<img src="{{ asset('bundles/omg/img/vide.png') }}">
+		<div class="infos">
+			<h2 class="ribbon">Cersei Lannister</h2>
+			<p>Maison Lannister</p>
+			{# <a href="{{ path('omg_getsheet', {'id_sheet':sheet.getId()}) }}">en savoir +</a> #}
+			<a href="#">en savoir +</a>
+		</div>
+	</div>
+
+	<div class="personnage">
+		<img src="{{ asset('bundles/omg/img/vide.png') }}">
+		<div class="infos">
+			<h2 class="ribbon">Cersei Lannister</h2>
+			<p>Maison Lannister</p>
+			{# <a href="{{ path('omg_getsheet', {'id_sheet':sheet.getId()}) }}">en savoir +</a> #}
+			<a href="#">en savoir +</a>
+		</div>
+	</div>
 
 {% endblock %}
