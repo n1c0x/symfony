@@ -1,18 +1,22 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-	
-	<!-- Liste des compétences -->
-	{% for skill in skills %}
-		<div class="personnage maison">
-			<img src="{{ asset('bundles/omg/img/vide.png') }}">
-			<div class="infos">
-				<h2 class="ribbon">{{ skill.getName() }}</h2>
-				<a href="{{ path('omg_getskill', {'id_skill':skill.getId()}) }}" target="_blank" class="button button_small">En savoir +</a>
-				<a href="{{ path('omg_updateskill', {'id_skill':skill.getId()}) }}" target="_blank" class="button button_small">Modifier</a>
-				<a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}" target="_blank" class="delete">Supprimer</a>
-			</div>
+
+<div id="title">
+	<h3 class="ribbon_large"><a href="{{ path('omg_addskill') }}">Ajouter une compétence</a></h3><div class="triangle_top"></div><div class="triangle_bot"></div>
+</div>
+
+<!-- Liste des compétences -->
+{% for skill in skills %}
+	<div class="personnage maison">
+		<img src="{{ asset('bundles/omg/img/vide.png') }}">
+		<div class="infos">
+			<h2 class="ribbon_large">{{ skill.getName() }}</h2><div class="triangle_top"></div><div class="triangle_bot"></div>
+			<a href="{{ path('omg_getskill', {'id_skill':skill.getId()}) }}" target="_blank" class="button button_small">En savoir +</a>
+			<a href="{{ path('omg_updateskill', {'id_skill':skill.getId()}) }}" target="_blank" class="button button_small">Modifier</a>
+			<a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}" target="_blank" class="delete">Supprimer</a>
 		</div>
-	{% endfor %}
+	</div>
+{% endfor %}
 {% endblock %}
 			

@@ -2,11 +2,18 @@
 
 {% block body %}
 
-<!-- Suppression d'une maison -->
-<div id="container_afficher_personnage">
-    Etes vous sur de vouloir effacer la compétence "{{skill.getName()}}" ?
-	{{ form(form) }}
+<!-- Suppression d'une compétence -->
+
+<div id="title">
+	<h3 class="ribbon_large">Supprimer une compétence</h3><div class="triangle_top"></div><div class="triangle_bot"></div>
 </div>
-    
+<div class="single-personnage delete" id="display">
+	<div class="row">
+	Etes vous sur de vouloir effacer la compétence "{{skill.getName()}}" ?
+	{{ form_widget(form.effacer, {'label' : 'Oui'}) }}
+	{{ form_widget(form.annuler, {'label' : 'Non'}) }}
+	</div>
+	
+</div>
+
 {% endblock %}
-            

@@ -19,9 +19,12 @@
 		{# Banniere #}
 		<header id="header" role="banner">
 			<div class="wrapper">
-				<a class="button" href="{{ path('omg_addsheet') }}" target="_blank">+ Ajouter un personnage</a>
+				{# <a class="button" href="{{ path('omg_addsheet') }}" target="_blank">+ Ajouter un personnage</a>
 				<a class="button" href="{{ path('omg_addhouse') }}" target="_blank">+ Ajouter une maison</a>
-				<a class="button" href="{{ path('omg_addskill') }}" target="_blank">+ Ajouter une compétence</a>
+				<a class="button" href="{{ path('omg_addskill') }}" target="_blank">+ Ajouter une compétence</a> #}
+				<a class="button" href="{{ path('omg_getlistsheet') }}" target="_blank">Personnages</a>
+				<a class="button" href="{{ path('omg_getlisthouse') }}" target="_blank">Maisons</a>
+				<a class="button" href="{{ path('omg_getlistskill') }}" target="_blank">Compétences</a>
 				<form id="searchit" action="php">
 					<label for="search">Rechercher</label>
 					<input type="text" id="search" name="search">

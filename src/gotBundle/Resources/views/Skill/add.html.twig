@@ -3,22 +3,26 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-
-<table class="champ_formulaire">
-	{{ form_start(form) }}
-	{{ form_errors(form) }}
-	<tr>
-		<td>{{ form_label(form.Name, 'Nom') }}</td>
-		<td>{{ form_widget(form.Name) }}</td>
-	</tr>
-	<tr>
-		<td>{{ form_label(form.Description, 'Description') }}</td>
-		<td>{{ form_widget(form.Description) }}</td>
-	</tr>
-	<tr>
-		<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
-	</tr>
-	{{ form_end(form) }}
-</table>
+<div class="champ_formulaire">
+	<div id="title">
+		<h3 class="ribbon_large">Ajout d'une compétence</h3><div class="triangle_top"></div><div class="triangle_bot"></div>
+	</div>
+	<table>
+		{{ form_start(form) }}
+		{{ form_errors(form) }}
+		<tr>
+			<td>{{ form_label(form.Name, 'Nom') }}</td>
+			<td>{{ form_widget(form.Name) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_label(form.Description, 'Description') }}</td>
+			<td>{{ form_widget(form.Description) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
+		</tr>
+		{{ form_end(form) }}
+	</table>
+</div>
 
 {% endblock %}

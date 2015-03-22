@@ -1,15 +1,20 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    etes vous sur de vouloir effacer la fiche:<br><br>
-    
-    id: {{sheet.getId()}}<br>
-    nom: {{sheet.getTitle()}}<br>
-    
-        {{ form(form) }}
 
+<!-- Suppression d'un personnage -->
 
+<div id="title">
+	<h3 class="ribbon_large">Supprimer un personnage</h3><div class="triangle_top"></div><div class="triangle_bot"></div>
+</div>
+<div class="single-personnage delete" id="display">
+	<div class="row">
+	Etes vous sur de vouloir effacer le personnage "{{sheet.getTitle()}}" ?
+	{{ form_widget(form.effacer, {'label' : 'Oui'}) }}
+	{{ form_widget(form.annuler, {'label' : 'Non'}) }}
+	</div>
+    
+</div>
     
 {% endblock %}
             

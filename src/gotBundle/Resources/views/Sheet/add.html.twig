@@ -3,34 +3,37 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-
-<table class="champ_formulaire">
-	{{ form_start(form) }}
-	{{ form_errors(form) }}
-	<tr>
-		<td>{{ form_label(form.name, 'Nom') }}</td>
-		<td>{{ form_widget(form.name) }}</td>
-	</tr>
-	<tr>
-		<td>{{ form_label(form.age, 'Age') }}</td>
-		<td>{{ form_widget(form.age) }}</td>
-	</tr>
-	<tr>
-		<td>{{ form_label(form.houseid, 'Maison') }}</td>
-		<td>{{ form_widget(form.houseid) }}</td>
-	</tr>
-	<tr>
-		<td>{{ form_label(form.skills, 'Compétences') }}</td>
-		<td>{{ form_widget(form.skills) }}</td>
-	</tr>
-	<tr>
-		<td>{{ form_label(form.description, 'Description') }}</td>
-		<td>{{ form_widget(form.description) }}</td>
-	</tr>
-	<tr>
-		<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
-	</tr>
-	{{ form_end(form) }}
-</table>
-
+<div class="champ_formulaire">
+	<div id="title">
+		<h3 class="ribbon_large">Ajout d'un personnage</h3><div class="triangle_top"></div><div class="triangle_bot"></div>
+	</div>
+	<table>
+		{{ form_start(form) }}
+		{{ form_errors(form) }}
+		<tr>
+			<td>{{ form_label(form.name, 'Nom') }}</td>
+			<td>{{ form_widget(form.name) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_label(form.age, 'Age') }}</td>
+			<td>{{ form_widget(form.age) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_label(form.houseid, 'Maison') }}</td>
+			<td>{{ form_widget(form.houseid) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_label(form.skills, 'Compétences') }}</td>
+			<td>{{ form_widget(form.skills) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_label(form.description, 'Description') }}</td>
+			<td>{{ form_widget(form.description) }}</td>
+		</tr>
+		<tr>
+			<td>{{ form_widget(form.save, {'label' : 'Sauvegarder'}) }}</td>
+		</tr>
+		{{ form_end(form) }}
+	</table>
+</div>
 {% endblock %}

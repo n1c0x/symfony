@@ -1,20 +1,33 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    
-    
-    <a href="{{ path('omg_addsheet') }}">add sheet</a>
-       
-    <ul>
-        {% for sheet in sheets %}
-            <li>{{ house.getTitle() }}</a>
-                <a href="{{ path('omg_getsheet', {'id_sheet':sheet.getId()}) }}">Voir</a>
-                <a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}">Update</a>
-                <a href="{{ path('omg_deletesheet', {'id_sheet':sheet.getId()}) }}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
-        
-    <a href="{{ path('omg_homepage') }}">retourner au menu</a>
+
+<div id="title">
+	<h3 class="ribbon_large"><a href="{{ path('omg_addsheet') }}">Ajouter un personnage</a></h3><div class="triangle_top"></div><div class="triangle_bot"></div>
+</div>
+<!-- Liste des personnages -->
+{% for sheet in sheets %}
+	<div class="personnage maison">
+		<img src="{{ asset('bundles/omg/img/vide.png') }}">
+		<div class="infos">
+			<h2 class="ribbon_large">{{ sheet.getTitle() }}</h2><div class="triangle_top"></div><div class="triangle_bot"></div>
+			<a href="{{ path('omg_getsheet', {'id_sheet':house.getId()}) }}" target="_blank" class="button button_small">En savoir +</a>
+			<a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}" target="_blank" class="button button_small">Modifier</a>
+			<a href="{{ path('omg_deletesheet', {'id_sheet':sheet.getId()}) }}" target="_blank">Supprimer</a>
+		</div>
+	</div>
+{% endfor %}
+{# 	
+	<a href="{{ path('omg_addsheet') }}">add sheet</a>
+	   
+	<ul>
+		{% for sheet in sheets %}
+			<li>{{ house.getTitle() }}</a>
+				<a href="{{ path('omg_getsheet', {'id_sheet':sheet.getId()}) }}">Voir</a>
+				<a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}">Update</a>
+				<a href="{{ path('omg_deletesheet', {'id_sheet':sheet.getId()}) }}">Delete</a>
+			</li>
+		{% endfor %}
+	</ul>
+ #}
 {% endblock %}
-            

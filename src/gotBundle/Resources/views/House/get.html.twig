@@ -2,26 +2,26 @@
 
 {% block body %}
 	
-	<!-- Description d'une maison -->
-	<div class="single-personnage" id="display">
-		<div class="row">
+<!-- Description d'une maison -->
+<div class="single-personnage" id="display">
+	<div class="row">
 
-			<div class="infos">
-			  <img class="portrait" src="{{ asset('bundles/omg/img/vide.png') }}">
+		<div class="infos">
+		  <img class="portrait" src="{{ asset('bundles/omg/img/vide.png') }}">
 
-				<div class="infos-inner">
-					<h2 class="ribbon">{{ house.getTitle() }}</h2>
-					<p>&ldquo;{{house.getCatchphrase()}}&rdquo;</p>
-					<p>Emblème: {{house.getHeraldry()}}</p>
-					<p>{{house.getDescription()}}</p>
-				</div>
-				<hr>
+			<div class="infos-inner">
+				<h2 class="ribbon">{{ house.getTitle() }}</h2>
+				<p>&ldquo;{{house.getCatchphrase()}}&rdquo;</p>
+				<p>Emblème: {{house.getHeraldry()}}</p>
+				<p>{{house.getDescription()}}</p>
 			</div>
+			<hr>
+		</div>
 
-			<div class="actions">
-				<a class="button" href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}" target="_blank" >Editer</a>
-				<a class="button" href="{{ path('omg_deletehouse', {'id_house':house.getId()})  }}" target="_blank" >Supprimer</a>
-			</div>
+		<div class="actions">
+			<a class="button" href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}" target="_blank" >Editer</a>
+			<a class="button" href="{{ path('omg_deletehouse', {'id_house':house.getId()})  }}" target="_blank" >Supprimer</a>
+		</div>
 
 	</div><!--row-->
 {% endblock %}
