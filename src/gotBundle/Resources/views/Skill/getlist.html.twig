@@ -13,8 +13,8 @@
 		<div class="infos">
 			<h2 class="ribbon_large">{{ skill.getName() }}</h2><div class="triangle_top"></div><div class="triangle_bot"></div>
 			<a href="{{ path('omg_getskill', {'id_skill':skill.getId()}) }}" target="_blank" class="button button_small">En savoir +</a>
-			<a href="{{ path('omg_updateskill', {'id_skill':skill.getId()}) }}" target="_blank" class="button button_small">Modifier</a>
-			<a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}" target="_blank" class="delete">Supprimer</a>
+			<a href="{{ path('omg_updateskill', {'id_skill':skill.getId()}) }}" class="button button_small">Modifier</a>
+			<a href="{{ path('omg_deleteskill', {'id_skill':skill.getId()}) }}" class="delete">Supprimer</a>
 		</div>
 	</div>
 {% endfor %}

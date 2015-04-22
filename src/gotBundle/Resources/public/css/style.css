@@ -108,6 +108,7 @@ header,footer {
 #main{
 	margin-bottom:40px;
 	height:auto;
+	padding-bottom: 100px;
 	overflow:hidden;
 }
 
@@ -375,10 +376,10 @@ header,footer {
 
 
 .champ_formulaire input, select{
-		height: 20px;
-		width: 300px;
-		margin: 10px;
-		font-size: 16px;
+	height: 20px;
+	width: 300px;
+	margin: 10px;
+	font-size: 16px;
 }
 .champ_formulaire textarea {
 	height: 10em !important;

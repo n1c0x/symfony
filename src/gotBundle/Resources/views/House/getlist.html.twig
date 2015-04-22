@@ -13,8 +13,8 @@
 		<div class="infos">
 			<h2 class="ribbon_large">{{ house.getTitle() }}</h2><div class="triangle_top"></div><div class="triangle_bot"></div>
 			<a href="{{ path('omg_gethouse', {'id_house':house.getId()}) }}" target="_blank" class="button button_small">En savoir +</a>
-			<a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}" target="_blank" class="button button_small">Modifier</a>
-			<a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}" target="_blank">Supprimer</a>
+			<a href="{{ path('omg_updatehouse', {'id_house':house.getId()}) }}" class="button button_small">Modifier</a>
+			<a href="{{ path('omg_deletehouse', {'id_house':house.getId()}) }}">Supprimer</a>
 		</div>
 	</div>
 {% endfor %}

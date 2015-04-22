@@ -12,8 +12,8 @@
 		<div class="infos">
 			<h2 class="ribbon_large">{{ sheet.getTitle() }}</h2><div class="triangle_top"></div><div class="triangle_bot"></div>
 			<a href="{{ path('omg_getsheet', {'id_sheet':house.getId()}) }}" target="_blank" class="button button_small">En savoir +</a>
-			<a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}" target="_blank" class="button button_small">Modifier</a>
-			<a href="{{ path('omg_deletesheet', {'id_sheet':sheet.getId()}) }}" target="_blank">Supprimer</a>
+			<a href="{{ path('omg_updatesheet', {'id_sheet':sheet.getId()}) }}" class="button button_small">Modifier</a>
+			<a href="{{ path('omg_deletesheet', {'id_sheet':sheet.getId()}) }}">Supprimer</a>
 		</div>
 	</div>
 {% endfor %}
